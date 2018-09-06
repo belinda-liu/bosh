@@ -41,5 +41,6 @@ pushd $RELEASE_BRANCH
 
   git remote add bosh-src $BOSH_SRC
 
-  git pull bosh-src HEAD --rebase
+  git fetch bosh-src HEAD
+  git merge FETCH_HEAD --no-ff
 popd
