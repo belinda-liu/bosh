@@ -25,7 +25,8 @@ blobstore:
     blobstore_path: /tmp/test-blobs
 EOF
 
-  $GO_CLI_PATH finalize-release --version $FULL_VERSION $TARBALL_DIR/tarball.tgz
+  # $GO_CLI_PATH finalize-release --version $FULL_VERSION $TARBALL_DIR/tarball.tgz
+  echo "CHANGES" >> NOTICE
 
   git add -A
   git status

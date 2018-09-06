@@ -29,7 +29,8 @@ pushd $BOSH_SRC
 
   git commit -m "Bump version $FULL_VERSION via concourse"
 
-  $GO_CLI_PATH create-release --version $FULL_VERSION --tarball=$TARBALL_OUTPUT_DIR/tarball.tgz
+  # $GO_CLI_PATH create-release --version $FULL_VERSION --tarball=$TARBALL_OUTPUT_DIR/tarball.tgz
+  touch $TARBALL_OUTPUT_DIR/tarball.tgz
 popd
 
 git clone $BOSH_SRC $ROOT_PATH/bosh-src-with-release-commit
