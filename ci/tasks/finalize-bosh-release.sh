@@ -42,11 +42,10 @@ pushd $PROMOTED_MASTER
 
   cat >> config/private.yml <<EOF
 ---
+blobstore_secret: 'does-not-matter'
 blobstore:
-  provider: s3
-  options:
-    access_key_id: "$BLOBSTORE_ACCESS_KEY_ID"
-    secret_access_key: "$BLOBSTORE_SECRET_ACCESS_KEY"
+  local:
+    blobstore_path: /tmp/test-blobs
 EOF
 
   $GO_CLI_PATH finalize-release --version $FULL_VERSION /tmp/tarball.tgz
