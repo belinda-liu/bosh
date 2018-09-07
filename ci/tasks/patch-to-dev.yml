@@ -14,4 +14,4 @@ outputs:
   - name: bosh-master-bumped-dev-version
 
 run:
-  path: bosh-src/ci/tasks/patch-to-dev.sh
+  path: bosh-master-with-final/ci/tasks/patch-to-dev.sh
